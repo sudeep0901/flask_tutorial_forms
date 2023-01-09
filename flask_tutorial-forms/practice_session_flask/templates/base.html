@@ -1,0 +1,58 @@
+{% extends "bootstrap/base.html" %}
+{% block head %}
+{{ super() }}
+{% block scripts %}
+{{ super() }}
+
+{% endblock %}
+<link rel="shortcut icon" href="/static/favicon.ico" type="image/png">
+
+<link rel="icon" href="http://127.0.0.1:5000/static/favicon.ico" type="image/png">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+</script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js">
+</script>
+
+<style>
+    .jumbotron {
+        background-color: #e3f2fd
+    }
+
+    .jumbotron h1 {
+        color: #337ab7
+    }
+
+    .jumbotron p {
+        color: rgb(12, 9, 9);
+    }
+
+    .jumbotron .btn {
+        background-color: #fff;
+        color: #f751af95;
+    }
+</style>
+{% endblock %}
+{% block navbar %}
+<div class="navbar  navbar-light navbar-fixed-top" style="background-color: #e3f2fd;" role="navigation">
+
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Bignalytics</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<script type="text/javascript" src="{{ url_for('static', filename='my-script.js') }}"></script>
